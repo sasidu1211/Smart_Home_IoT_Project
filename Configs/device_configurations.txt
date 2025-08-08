@@ -1,0 +1,47 @@
+# Smart Home IoT Network with RADIUS Server - Device Configurations
+
+## 1. Wireless Router
+- Device Name: WirelessRouter
+- IP Address: 192.168.0.1
+- Subnet Mask: 255.255.255.0
+- DHCP: Enabled
+  - Start IP: 192.168.0.2
+  - Maximum Users: 50
+- SSID: Home_IoT
+- Security: WPA2-PSK
+- Password: iotnetwork123
+
+## 2. IoT & RADIUS Server
+- Device Name: IoT & RADIUS-Server
+- IP Address: 192.168.0.10
+- Subnet Mask: 255.255.255.0
+- Gateway: 192.168.0.1
+- Purpose: Manage all IoT devices
+- Authentication: WPA2-Enterprise
+- Shared Secret: cisco123
+
+## 4. Laptop
+- Device Name: Cliant's Laptop
+- Connection: Copper Straight-Through Cable → Switch
+- IP Assignment: DHCP
+
+## 5. Switch
+- Device Name: Switch-1
+- Purpose: Connect laptop and servers to router
+
+## 6. Smart Fan
+- Device Name: Fan
+- IP Assignment: DHCP
+- Controlled by IoT Server automation
+- Rule: IF Temperature > 20°C → Turn ON Fan
+        IF Temperature < 20°C → Turn OFF Fan
+
+## 7. Smart Light
+- Device Name: Light
+- IP Assignment: DHCP
+- Controlled by IoT Server
+
+## 8. Temperature Sensor
+- Device Name: Temperature Sensor
+- IP Assignment: DHCP
+- Sends data to IoT Server

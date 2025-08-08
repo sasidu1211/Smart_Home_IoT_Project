@@ -1,0 +1,31 @@
+IP Address Plan - Smart Home IoT Network with IoT & RADIUS Server
+
+Network Addressing Scheme:
+--------------------------
+Network: 192.168.0.0 /24
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.0.1
+
+Device IP Allocation:
+---------------------
+1. Wireless Router (Gateway)  - 192.168.0.1
+2. IoT & RADIUS Server        - 192.168.0.10
+4. Switch (Layer 2)           - N/A (No IP assigned)
+5. Laptop                     - DHCP
+6. Smart Light                - DHCP
+7. Smart Fan                  - DHCP
+8. Smart Door                 - DHCP
+9. Temperature Sensor         - DHCP
+10. Motion Detector           - DHCP
+
+DHCP Settings (If Enabled on Router):
+-------------------------------------
+Start IP: 192.168.0.10
+Max Users: 50
+IP Range: 192.168.0.10 - 192.168.0.59
+
+Notes:
+------
+- All devices use static IPs unless DHCP is explicitly enabled.
+- IoT & RADIUS servers have fixed IPs for consistent accessibility.
+- Laptop connects to switch via Copper Straight cable.
