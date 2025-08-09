@@ -3,13 +3,10 @@
 ## 📌 Project Overview
 This project is a **Smart Home IoT Network** simulation built using **Cisco Packet Tracer v8.2.0.20400**.  
 It demonstrates IoT device management through an **IoT server** and secure authentication using a **RADIUS server**.
-
-The original design used a **Home Gateway** and a **smartphone**.  
-In this updated version:
-- **Home Gateway** → Removed  
+ 
+In this updated version: 
 - **IoT Server** → Added  
-- **RADIUS Server** → Added  
-- **Smartphone** → Replaced with Laptop  
+- **RADIUS Server** → Added   
 - **Laptop connected to Switch** via Copper Straight Cable  
 
 ---
@@ -18,29 +15,26 @@ In this updated version:
 **Devices Used:**
 - 1 x Wireless Router
 - 1 x Switch
-- 1 x IoT Server
-- 1 x RADIUS Server
+- 1 x IoT Server & RADIUS Server
 - 1 x Laptop
 - Smart IoT Devices: Smart Light, Smart Fan, Smart Door, Temperature Sensor, Motion Detector
 
 **Connections:**
 - Wireless Router connected to Switch (Copper Straight)
-- IoT Server connected to Switch (Copper Straight)
-- RADIUS Server connected to Switch (Copper Straight)
+- IoT Server & RADIUS Server connected to Switch (Copper Straight)
 - Laptop connected to Switch (Copper Straight)
 - IoT Devices connected wirelessly via Wireless Router
 
 ---
 
 ## 🌐 IP Address Plan
-| Device           | Interface          | IP Address     | Subnet Mask     | Gateway        |
-|------------------|-------------------|----------------|-----------------|---------------|
-| Wireless Router  | G0/0              | 192.168.0.1    | 255.255.255.0   | -             |
-| Switch           | VLAN 1            | 192.168.0.3    | 255.255.255.0   | 192.168.0.1   |
-| IoT Server       | Fa0/0             | 192.168.0.4    | 255.255.255.0   | 192.168.0.1   |
-| RADIUS Server    | Fa0/0             | 192.168.0.5    | 255.255.255.0   | 192.168.0.1   |
-| Laptop           | Fa0               | DHCP/Static    | 255.255.255.0   | 192.168.0.1   |
-| IoT Devices      | Wireless          | DHCP           | 255.255.255.0   | 192.168.0.1   |
+| Device                     | Interface         | IP Address     | Subnet Mask     | Gateway       |
+|----------------------------|-------------------|----------------|-----------------|---------------|
+| Wireless Router            | G0/0              | 192.168.0.1    | 255.255.255.0   | -             |
+| Switch                     | VLAN 1            | 192.168.0.1    | 255.255.255.0   | 192.168.0.1   |
+| IoT Server & RADIUS Server | Fa0/0             | 192.168.0.10   | 255.255.255.0   | 192.168.0.1   |
+| Laptop                     | Fa0               | DHCP           | 255.255.255.0   | 192.168.0.1   |
+| IoT Devices                | Wireless          | DHCP           | 255.255.255.0   | 192.168.0.1   |
 
 ---
 
@@ -57,10 +51,9 @@ In this updated version:
 
 ### 3️⃣ RADIUS Server
 - Authentication Protocol: PAP
-- Shared Secret: `myradiuskey123`
+- Shared Secret: `cisco123`
 - User Accounts:
-  - **admin1 / adminpass1**
-  - **user1 / userpass1**
+  - **admin / admin**
 
 ### 4️⃣ Laptop
 - Configured with DHCP (auto IP)
